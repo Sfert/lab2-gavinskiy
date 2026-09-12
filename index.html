@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Форма</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 36px 18px;
+        font-family: Arial, sans-serif;
+        color: #172033;
+        background: #eef4f8;
+      }
+      main {
+        width: min(720px, 100%);
+        margin: 0 auto;
+        padding: 32px;
+        border-radius: 18px;
+        background: #fff;
+        box-shadow: 0 12px 36px rgba(20, 60, 90, 0.12);
+      }
+      h1 {
+        margin-top: 0;
+        color: #dd0606;
+      }
+      .intro {
+        color: #4c5b6a;
+      }
+      fieldset {
+        margin: 24px 0;
+        padding: 18px;
+        border: 1px solid #d60808;
+        border-radius: 12px;
+      }
+      legend {
+        padding: 0 8px;
+        font-weight: 700;
+        color: #dd0606;
+      }
+      .field {
+        margin-bottom: 16px;
+      }
+      .field:last-child {
+        margin-bottom: 0;
+      }
+      .field > label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: 700;
+      }
+      input:not([type="radio"]):not([type="checkbox"]),
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px 12px;
+        border: 1px solid #8fa5b8;
+        border-radius: 7px;
+        font: inherit;
+      }
+      fieldset fieldset {
+        margin: 0;
+        padding: 12px 18px 14px;
+        border-color: #dd0606;
+      }
+      fieldset fieldset legend {
+        font-weight: 700;
+        font-size: 1rem;
+      }
+      .choice {
+        margin: 10px 0;
+      }
+      .choice label {
+        display: inline;
+        font-weight: 400;
+      }
+      .hint {
+        margin: 6px 0 0;
+        color: #596978;
+        font-size: 0.9rem;
+      }
+      button {
+        padding: 12px 20px;
+        border: 0;
+        border-radius: 8px;
+        color: #fff;
+        background: #030303;
+        font: inherit;
+        font-weight: 700;
+      }
+      button:hover,
+      button:focus-visible {
+        background: #1769aa;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <ul>
+        <nav>
+          <h1>Навігація</h1>
+          <li>
+            <a href="index.html"><h2>1 - Task</h2> </a>
+          </li>
+          <li>
+            <a href="table.html"><h2>2 - Task</h2> </a>
+          </li>
+        </nav>
+      </ul>
+      <h1>Реєстрація на навчальний процес</h1>
+      <p class="intro">Поля, позначені зірочкою (*), є обов'язковими.</p>
+      <form action="success.html">
+        <fieldset>
+          <legend>Особисті дані</legend>
+          <label for="name">Ім'я</label>
+          <input type="text" id="name" name="name" required />
+          <label for="lastname">Призвище</label>
+          <input type="text" id="lastname" name="lastname" required />
+          <label for="Surname">Побатькові</label>
+          <input type="text" id="Surname" name="Surname" required />
+        </fieldset>
+        <fieldset>
+          <legend>Де та коли народився</legend>
+          <label for="birthdate">Дата народження</label>
+          <input type="date" id="birthdate" name="birthdate" required />
+          <label for="birthplace">Місце народження</label>
+          <select id="birthplace" name="birthplace" required>
+            <option value="Україна">Україна</option>
+            <option value="Польща">Польща</option>
+            <option value="Німеччина">Німеччина</option>
+            <option value="Франція">Франція</option>
+            <option value="Італія">Італія</option>
+            <option value="Іспанія">Іспанія</option>
+            <option value="Велика Британія">Велика Британія</option>
+            <option value="США">США</option>
+            <option value="Канада">Канада</option>
+            <option value="Чехія">Чехія</option>
+            <option value="Словаччина">Словаччина</option>
+            <option value="Румунія">Румунія</option>
+            <option value="Молдова">Молдова</option>
+            <option value="Литва">Литва</option>
+            <option value="Латвія">Латвія</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <legend>Форма навчання</legend>
+          <div>
+            <input
+              type="radio"
+              id="offline"
+              name="format"
+              value="offline"
+              required=""
+            />
+            <label for="offline">Очна</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              id="online"
+              name="format"
+              value="online"
+              required=""
+            />
+            <label for="online">Електронна</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              id="parttime"
+              name="format"
+              value="parttime"
+              required=""
+            />
+            <label for="parttime">Заочна</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Доп.</legend>
+          <div>
+            <input
+              type="checkbox"
+              id="olimpiad"
+              name="dop"
+              value="olimpiad"
+            />
+            <label for="olimpiad">Олімпіадник(мав участь у олімпіадах)</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="language"
+              name="dop"
+              value="language"
+            />
+            <label for="language">Володію іноземною мовою</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              id="sport"
+              name="dop"
+              value="sport"
+            />
+            <label for="sport">Займаюся спортом</label>
+          </div>
+        </fieldset>
+        <button type="submit">Підтвердити дані</button>
+      </form>
+    </main>
+  </body>
+</html>
